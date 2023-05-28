@@ -1,0 +1,239 @@
+/* universal */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
+  }
+/* -----------------header-------------------- */
+header{
+  height: 90px;
+  background: #0eaba2;
+  padding: 0 50px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  position: absolute;
+  width: 84px;
+  height: 87px;
+  left: 43px;
+  top: 1px;
+}
+.menu a{
+  color: white;
+  text-decoration: none;
+  padding:  0 10px;
+  transition: 0.5s;
+}
+/* ---------------menuburger---------------- */
+.menuopen,
+.menuclose{
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.5;
+}
+.menuopen{
+  order: 1;
+}
+.menu a:hover,
+.menuopen:hover,
+.menuclose:hover{
+  color: blueviolet;
+}
+#check{
+  display: none;
+}
+/* ----------------------Home------------------------- */
+/* -----------------home-------------------- */
+#home{
+  padding: 0;
+  background-image: url(/img/fondositiosweb.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: left;
+}
+.welcome{
+  position: relative;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+}
+.welcome h3{
+  padding-top: 5px;
+  font-size: 100px;
+  font-weight: 700;
+  width: 100%;
+  transform: translateX(100%);
+  animation: animationWelcome 20s infinite;
+  animation-timing-function: cubic-bezier(.03,.16,.82,.34);
+}
+@keyframes animationWelcome {
+  from {
+      transform: translateX(100%);
+  }
+
+  to {
+      transform: translateX(-50%);
+  }
+}
+/* --------------------projects-------------------- */
+.two{
+  background-color: rgb(55, 55, 141);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.two-one{
+  background-image: url(/img/mujerrosa.png);
+  background-size: cover;
+}
+.two-two{
+  background-image: url(/img/kidclown.png);
+  background-size: cover;
+}
+
+
+.square {
+  background-color: indianred;
+  height: 500px;
+  width: 500px;
+}
+
+/* -----------------about-------------------- */
+.three{
+  background-color: rgb(185, 185, 222);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.three-one{
+  background-image: url(/img/calaverassitioswebcontactfront.png);
+  background-size: cover;
+}
+.sobre{
+  position: absolute;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+}
+.sobre h3{
+  position: absolute;
+  bottom: 50px;
+  font-size: 100px;
+  font-weight: 700;
+  width: 100%;
+  transform: translateX(100%);
+  animation: animationSobre 20s infinite;
+  animation-timing-function: cubic-bezier(.03,.16,.82,.34);
+  z-index: 1;
+}
+@keyframes animationSobre {
+  from {
+      transform: translateX(100%);
+  }
+
+  to {
+      transform: translateX(-50%);
+  }
+}
+/* -----------------contact------------------ */
+.four{
+  background-color: rgb(95, 95, 191);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.four-two{
+  background-image: url(/img/calaverassitioswebcontact3.png);
+  background-size: cover;
+}
+
+.contacto{
+  position: absolute;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  overflow: hidden;
+}
+.contacto h3{
+  position: absolute;
+  bottom: 50px;
+  font-size: 100px;
+  font-weight: 700;
+  width: 100%;
+  transform: translateX(100%);
+  animation: animationContact 20s infinite;
+  animation-timing-function: cubic-bezier(.03,.16,.82,.34);
+}
+@keyframes animationContact {
+  from {
+      transform: translateX(100%);
+  }
+
+  to {
+      transform: translateX(-50%);
+  }
+}
+/* responsive celphone */
+@media(max-width:564px){
+  #home{
+  padding: 0;
+  background-image: url(/img/fondositiosweb.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: left;
+  }
+}
+/* responsive tablet */
+@media(max-width:768px){
+  /* header */
+  .menuopen,
+  .menuclose{
+    display: block;
+  }
+.menu{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: #0eaba2;
+  right: -100%;
+  top: 0;
+  text-align: center;
+  padding: 100px 0px;
+  z-index: 100;
+  transition: .8s;
+  }
+.menu a{
+  display: block;
+  padding: 20px;
+}
+.menuclose{
+  position: absolute;
+  top: 40px;
+  right: 40px;
+}
+#check:checked ~ .menu{
+  right: 0;
+}
+}
